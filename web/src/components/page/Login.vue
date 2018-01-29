@@ -10,7 +10,7 @@
                     <el-input type="password" placeholder="password" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')"></el-input>
                 </el-form-item>
                 <div class="login-btn">
-                    <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
+                    <el-button type="primary" @click="submitForm('ruleForm')" v-loading.fullscreen.lock="fullscreenLoading">登录</el-button>
                 </div>
                 <p style="font-size:12px;line-height:30px;color:#999;">Tips : 用户名和密码随便填。</p>
             </el-form>
@@ -22,6 +22,7 @@
     export default {
         data: function(){
             return {
+                fullscreenLoading: false,
                 ruleForm: {
                     username: '',
                     password: ''
@@ -38,6 +39,8 @@
         },
         methods: {
             submitForm(formName) {
+                this.fullscreenLoading = true;
+                setTimeout(() => {
                 const self = this;
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
@@ -48,6 +51,7 @@
                         return false;
                     }
                 });
+                }, 1000);   
             }
         }
     }
