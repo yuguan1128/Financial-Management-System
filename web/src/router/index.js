@@ -17,6 +17,16 @@ export default new Router({
     {
       path: '/home',
       component: resolve => require(['../components/common/Home.vue'], resolve),
+    },
+    {
+      path: '/readme',
+      component: resolve => require(['../components/common/Home.vue'], resolve),
+      children:[
+        {
+          path: '/',
+          component: resolve => require(['../components/page/Readme.vue'], resolve)
+        },
+      ]
     }
   ]
 })
