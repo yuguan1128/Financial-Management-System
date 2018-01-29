@@ -15,7 +15,7 @@ export default new Router({
       component: resolve => require(['../components/page/Login.vue'], resolve)
     },
     {
-      path: '/readme',
+      path: '/home',
       component: resolve => require(['../components/common/Home.vue'], resolve),
     }
   ]
