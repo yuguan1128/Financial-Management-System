@@ -32,7 +32,7 @@
                     {
                         icon: 'el-icon-menu',
                         index: '2',
-                        title: '个人资产',
+                        title: '收入记录',
                         subs: [
                             {
                                 index: 'basetable',
@@ -47,7 +47,7 @@
                     {
                         icon: 'el-icon-date',
                         index: '3',
-                        title: '支出',
+                        title: '支出记录',
                         subs: [
                             {
                                 index: 'baseform',
@@ -70,12 +70,12 @@
                     {
                         icon: 'el-icon-star-on',
                         index: 'basecharts',
-                        title: '图表'
+                        title: '查询统计'
                     },
                     {
                         icon: 'el-icon-upload2',
                         index: 'drag',
-                        title: '拖拽'
+                        title: '还贷助手'
                     }
                 ]
             }
