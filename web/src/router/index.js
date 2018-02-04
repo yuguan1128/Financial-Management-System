@@ -26,6 +26,10 @@ export default new Router({
           path: '/',
           component: resolve => require(['../components/page/Readme.vue'], resolve)
         },
+        {
+          path: '/setting',
+          component: resolve => require(['../components/page/setting.vue'], resolve)
+        },
       ]
     }
   ]

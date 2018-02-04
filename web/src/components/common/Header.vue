@@ -8,7 +8,7 @@
                     {{username}}
                 </span>
                 <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item>个人中心</el-dropdown-item>
+                    <el-dropdown-item command="setting">个人中心</el-dropdown-item>
                     <el-dropdown-item command="loginout" divided="true">退出</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
@@ -33,6 +33,9 @@
                 if(command == 'loginout'){
                     localStorage.removeItem('ms_username')
                     this.$router.push('/login');
+                }
+                if(command == 'setting'){
+                    this.$router.push('/setting');
                 }
             }
         }
